@@ -15,9 +15,9 @@
             else if (!ctype_digit($mike[2]))
                 echo "Votre parametre $mike[2] n'ai pas correct";
             else{
-				echo "Parametre 1 : $mike[1]<br/>Parametre 2 : $mike[2]";
+				echo "Resulta = ". ($mike[1]+$mike[2]);
 			}
-	echo $_POST["Mike"];
+
 }
  ?>
 <!DOCTYPE html>
