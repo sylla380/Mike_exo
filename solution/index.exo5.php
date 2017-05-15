@@ -4,24 +4,29 @@
 	  $mike = explode(" ", rtrim($_POST["Mike"])); //explode sert a couper une chaine de caractére
 
 	  if (count ($mike) < 3)
-
 	  	echo "Nombre de paramétres pas assez important";
-		else if (count ($mike) > 3)
-			echo "Nombre de paramétres trop important";
-			else if ($mike [0] != "Mike")
-			echo "Premier valeur incorrect";
-			else if (!ctype_digit($mike[1]))
-                echo "Votre paramétre $mike[1] n'ai pas correct";
-            else if (!ctype_digit($mike[2]))
-                echo "Votre parametre $mike[2] n'ai pas correct";
-            else{
-				if($mike[1]%2){
-                echo "Votre parametre est impaire";
-            }
-                else{
-                echo "Votre parametre est paire";
-			}
+	else if (count ($mike) > 3)
+		echo "Nombre de paramétres trop important";
+	else if ($mike [0] != "Mike")
+	   echo "Premier valeur incorrect";
+	else if (!ctype_digit($mike[1]))
+        echo "Votre paramétre $mike[1] n'ai pas correct";
+    else if (!ctype_digit($mike[2]))
+        echo "Votre parametre $mike[2] n'ai pas correct";
+    else{
+        /*simple*/
+		// if ($mike[1] > $mike[2])
+        //     echo "La puissance est $mike[1]";
+        // elseif ($mike[2] > $mike[1])
+        //     echo "La puissance est $mike[2]";
+        // else
+        //     "equals";
+
+        /*Ternaire*/
+        echo ($mike[1] > $mike[2])?"La puissance est $mike[1]": ($mike[2] > $mike[1])?"La puissance est $mike[2]":"equals";
+    }
 }
+
  ?>
 <!DOCTYPE html>
 <html lang="fr">
